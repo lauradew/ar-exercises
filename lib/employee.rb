@@ -9,6 +9,6 @@ class Employee < ActiveRecord::Base
 
   private
     def add_random_password
-      self.password = Sysrandom.hex(5)
+      self.password = Sysrandom.hex(5).slice(0..7)
     end
 end
